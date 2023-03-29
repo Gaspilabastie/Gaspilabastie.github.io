@@ -1,0 +1,507 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+
+    --nav-height: 10vh;
+    /*padding-top: var(--nav-height);*/
+}
+
+html,
+header,
+section,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+header {
+    background-color: #1f203a;
+}
+
+.nav {
+    width: 100%;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1f203a;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px #000;
+    transition: 0.5s;
+}
+
+.nav--hidden {
+    transform: translateY(calc(-1 * var(--nav-height)));
+    box-shadow: none;
+    opacity: 0;
+}
+
+header #icon {
+    text-align: center;
+    color: #fff;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 300%;
+    letter-spacing: -22.5px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+header p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+header #G {
+    color: #259bca;
+}
+
+header .nav #tags {
+    font-size: 3.5vh;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 5vh;
+    word-spacing: 4vh;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#Home {
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#Home img {
+    width: 107.5%;
+    transform: translate(0, -10%);
+}
+
+#Home #background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 75%;
+    top: 0;
+    background-color: #1f203a;
+    z-index: 20;
+}
+
+#Home #cuadrado {
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Red Hat Display', sans-serif;
+    z-index: 30;
+}
+
+#Home #cuadrado h1 {
+    text-align: center;
+    font-size: 15vh;
+    color: #88d1ee;
+}
+
+#Home #cuadrado p {
+    text-align: center;
+    font-size: 5vh;
+    color: #fff;
+}
+
+.cian_box {
+    background-color: blue;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 5vh;
+    padding: 2px 4px;
+    font-size: 3vh;
+    font-weight: 400;
+}
+
+#About {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+#About #image_1 {
+    position: absolute;
+    z-index: 40;
+    width: 50vh;
+    right: -25vh;
+    top: -28.8vh;
+}
+
+#About .container {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#About h2 {
+    height: 10%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 6vh;
+    margin: 0;
+    padding-top: 7.5vh;
+}
+
+#About #contenido_1 {
+    width: 60%;
+    height: 60%;
+    float: left;
+}
+
+#About #contenido_1 h3 {
+    margin-top: 5vh;
+    font-size: 4vh;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+}
+
+#About #contenido_1 b {
+    color: #259bca;
+    font-weight: 300;
+}
+
+#About #contenido_1 p {
+    margin-top: 2vh;
+    line-height: 4vh;
+}
+
+#About #contenido_2 {
+    width: 40%;
+    height: 60%;
+    float: left;
+    position: relative;
+}
+
+#About #contenido_2 #circle {
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    width: 50vh;
+    height: 50vh;
+    background-image: url(./imagenes/gaspar_foto_2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-radius: 50%;
+    transform: rotate(-20deg) translate(-50%);
+    transition: all 0.3s;
+}
+
+#About #contenido_2 #circle:hover {
+    transform: scale(110%) rotate(-20deg) translate(-45%);
+    box-shadow: 30px 30px #1f203a;
+}
+
+#About #contenido_3 {
+    width: 100%;
+    height: 30%;
+    float: left;
+}
+
+#Skills {
+    width: 100%;
+    height: 100vh;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+#Skills h2 {
+    text-align: center;
+    margin: 0;
+    padding-top: 13vh;
+    font-weight: 500;
+    font-size: 6vh;
+}
+
+#Skills .content {
+    width: 90%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Skills .block {
+    width: 20%;
+    display: inline;
+    float: left;
+    text-align: center;
+    margin: 0 6.66%;
+    margin-top: 5vh;
+    transition: all 0.2s;
+}
+
+#Skills .block:hover {
+    transform: scale(115%);
+    background-color: #f2f2f2;
+}
+
+#Skills img {
+    height: 15vh;
+}
+
+#Contact {
+    width: 100%;
+    height: 85vh;
+    background-color: #00669E;
+    display: block;
+}
+
+#Contact #contenedor_1 {
+    float: left;
+    width: 40%;
+    color: #000;
+    font-size: 60%;
+    font-weight: 750;
+    height: 100%;
+    margin-left: 10%;
+    position: relative;
+}
+
+#Contact #contenedor_1 h2 {
+    color: #fff;
+    margin-top: 12vh;
+    margin-bottom: 9vh;
+    font-size: 500%;
+    font-weight: 600;
+}
+
+#Contact #contenedor_1 div {
+    width: 75%;
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 3vh;
+    font-weight: 500;
+}
+
+#Contact #contenedor_1 p {
+    margin: 0;
+}
+
+#Contact #contenedor_1 .bold {
+    font-weight: 600;
+    margin-top: 5vh;
+}
+
+#Contact #contenedor_2 {
+    padding-top: 12vh;
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+#Contact #contenedor_2>div {
+    display: inline-block;
+    width: 100%;
+}
+
+#Contact #contenedor_2 label,
+#Contact #contenedor_2 input {
+    display: inline-block;
+    line-height: 4vh;
+}
+
+#Contact #contenedor_2 label {
+    font-weight: bold;
+    width: 80%;
+    margin-left: 10px;
+
+}
+
+#Contact form>div {
+    display: inline-block;
+    width: 80%;
+    height: 50px;
+    box-sizing: border-box;
+    border-bottom: 1.5px solid #000;
+}
+
+#Contact #contenedor_2 input {
+    border: 0;
+    margin-left: 10px;
+    background-color: #00669E;
+    width: 80%;
+    color: #000;
+    height: 6vh;
+}
+
+#Contact #contenedor_2 input:focus {
+    outline: none;
+}
+
+#Contact #contenedor_2 input::placeholder {
+    color: #000;
+}
+
+#Contact #contenedor_2 .normal_input {
+    box-shadow: 0 0 0px 1000px #00669E inset;
+}
+
+#Contact #contenedor_2 .normal_input::first-line {
+    color: #000
+}
+
+#Contact #mensaje {
+    height: 100px;
+    background-color: #00669E;
+}
+
+#Contact #mensaje textarea {
+    height: 80px;
+    display: inline-block;
+    line-height: 3.5vh;
+    border: 0;
+    margin-left: 10px;
+    background-color: #00669E;
+    width: 80%;
+    color: #000;
+    resize: none;
+    overflow: hidden;
+}
+
+#Contact #contenedor_2 textarea:focus {
+    outline: none;
+}
+
+#Contact #contenedor_2 textarea::placeholder {
+    color: #000;
+}
+
+#Contact #enviar {
+    margin-top: 10px;
+    border-bottom: 0;
+}
+
+#Contact #enviar>div {
+    background-color: #000;
+    text-align: center;
+    height: 35px;
+}
+
+#Contact #enviar button {
+    background: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5vh;
+    padding: 0;
+    cursor: pointer;
+}
+
+#Contact #contenedor_2 p {
+    width: 80%;
+    text-align: center;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #000;
+    height: 15vh;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+footer .redes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+footer .right {
+    margin-right: 10vh;
+}
+
+footer img {
+    height: 5vh;
+    transition: all 0.3s;
+}
+
+footer #ico_linkedin:hover {
+    transform: scale(125%);
+    filter: invert(26%) sepia(100%) saturate(1556%) hue-rotate(177deg) brightness(93%) contrast(89%);
+}
+
+footer #ico_instagram:hover {
+    transform: scale(125%);
+    filter: invert(30%) sepia(16%) saturate(6787%) hue-rotate(296deg) brightness(93%) contrast(89%);
+}
+
+footer #ico_facebook:hover {
+    transform: scale(125%);
+    filter: invert(32%) sepia(9%) saturate(3302%) hue-rotate(183deg) brightness(98%) contrast(90%);
+}
+
+footer #ico_github:hover {
+    transform: scale(125%);
+    filter: invert(29%) sepia(6%) saturate(186%) hue-rotate(182deg) brightness(97%) contrast(93%);
+}
+
+footer #ico_whatsapp:hover {
+    transform: scale(125%);
+    filter: grayscale(100%) brightness(60%) sepia(300%) hue-rotate(50deg) saturate(500%);
+}
+
+/*
+FONTS:
+font-family: 'Inconsolata', monospace; 300;400
+font-family: 'Montserrat', sans-serif; 200;300;400;500;600
+font-family: 'Red Hat Display', sans-serif; 300
+
+COLORS:
+*/
+#Color_list {
+    color: #000;
+    color: #1f203a;
+    color: #00669E;
+    color: #259bca;
+    color: #f2f2f2;
+    color: #f9f9f9;
+    color: #fff;
+}
